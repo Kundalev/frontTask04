@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Crypto</title>
+</head>
+<body>
+<style>
+    #content {
+        position: relative;
+        display: flex;
+    }
+
+    .collection-wrap {
+        width: 50%;
+    }
+
+    .collection {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        padding-right: 20px;
+    }
+
+    .collection-col {
+        margin-bottom: 20px;
+        margin-right: 20px;
+        border: 1px solid;
+        padding: 10px;
+    }
+
+    .collection-header {
+        margin-top: 0;
+    }
+
+    .collection-list {
+
+    }
+
+    .collection-list__item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .collection-list__item-text {
+        margin-right: 8px;
+    }
+
+    .collection-list__item-text:last-child {
+        margin-right: 0;
+    }
+
+
+    .list-subscribe-wrap {
+        width: 50%;
+    }
+
+    .list-subscribe {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .list-current-subscribe__item {
+        display: flex;
+        margin-right: 20px;
+        border: 1px solid;
+        padding: 10px;
+    }
+
+    .list-current-subscribe__item-header {
+        margin-right: 16px;
+    }
+
+    .list-current-subscribe__item-pairs {
+
+    }
+
+    .list-current-subscribe__item-pairs p {
+        margin-top: 0;
+    }
+
+    .list-current-subscribe__item-btn {
+        margin-left: 16px;
+        height: 24px;
+        cursor: pointer;
+    }
+</style>
+
+<h1>WebSocket Crypto</h1>
+<div id="content">
+    <div class="collection-wrap">
+        <h3>List collection currency</h3>
+        <div id="collection" class="collection">
+            <div class="collection-col">
+                <h4 class="collection-header">
+                    ETH
+                </h4>
+                <div class="collection-list">
+                    <div class="collection-list__item">
+                        <div class="collection-list__item-text">ETHAED</div>
+                        <div class="collection-list__item-text">14375.48</div>
+                        <div class="collection-list__item-text">0.00%</div>
+                        <div class="collection-list__item-text">0.01</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <input id="pair" type="text" placeholder="AAVE/USD">
+        <button id="add">Add</button>
+    </div>
+    <div class="list-subscribe-wrap">
+        <h3>List subscriptions:</h3>
+        <div id="list-subscribe" class="list-subscribe">
+            <div class="list-current-subscribe__item">
+                <div class="list-current-subscribe__item-header">
+                    Trade
+                </div>
+                <div id="pairs" class="list-current-subscribe__item-pairs">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="main.js"></script>
+</body>
+</html>
